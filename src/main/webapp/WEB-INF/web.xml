@@ -8,7 +8,7 @@
 	<!--spring listener 参数 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath*:spring-mvc-servlet.xml</param-value>
+		<param-value>classpath*:kafka-servlet.xml</param-value>
 	</context-param>
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -31,13 +31,13 @@
 	<!-- POST中文乱码过滤器 END -->
 
 	<servlet>
-		<servlet-name>spring-mvc</servlet-name>
+		<servlet-name>kafka</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<!-- 查找servlet-context.xml -->
-		<servlet-name>spring-mvc</servlet-name>
+		<servlet-name>kafka</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 </web-app>
